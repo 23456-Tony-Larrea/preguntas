@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz App</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel = "icon" href =  
+"https://cdn.iconscout.com/icon/premium/png-512-thumb/quiz-18-831952.png" 
+        type = "image/x-icon"> 
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato:300,400|Montserrat:700' rel='stylesheet' type='text/css'>
+				<style>
+					@import url(//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css);
+					@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+				</style>
+				<link rel="stylesheet" href="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/default_thank_you.css">
+				<script src="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/jquery-1.9.1.min.js"></script>
+				<script src="https://2-22-4-dot-lead-pages.appspot.com/static/lp918/min/html5shiv.js"></script>
+</head>
+<body>
+	<div class="home-box custome-box " onclick="startQuiz()">
+		<button  target="_blank">
+			<span> </span>
+			<span> </span>
+			<span> </span>
+			<span> </span>
+			EMPEZAR ENCUESTA
+		</button>
+	</div>
+
+	<div class="quiz-box custome-box hide">
+		<div class="question-no">
+			
+		</div>
+		<div class="question-text hide">
+			
+		</div>
+		<div class="opt-container hide">
+			
+		</div>
+		<div class="next-question-btn">
+			<button type="button" class="btn" onclick="next()">SIGUIENTE</button>
+		</div>	
+	</div>
+
+	<div class="result-box custome-box hide">
+			<body>
+				<header class="site-header" id="header">
+					<h1 class="site-header__title" data-lead-id="site-header-title">GRACIAS!</h1>
+				</header>
+			
+				<div class="main-content">
+					<i class="fa fa-check main-content__checkmark" id="checkmark"></i>
+					<p class="main-content__body" data-lead-id="main-content-body">Tu encuesta sevira para calificar </p>
+				</div>
+				</div>
+
+	<script type="text/javascript" src="js/question.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
