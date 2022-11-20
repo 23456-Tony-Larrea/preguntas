@@ -72,6 +72,35 @@ function getNewQuestion(){
  	
  	questionCounter++
 }
+//fetch the result of current attempt question
+function getResult(element){
+	const id = parseInt(element.id);
+	//fetch the answer by comparing the id of clicked option
+	if (id === currentQuestion.answer){
+		//set the green color to the correct option
+		element.classList.add("correct");
+		// add the indicator correct mark
+		updateAnswerIndicator("correct");
+		correctAnswers++;
+		console.log("correct:"+correctAnswers)
+	}
+	else{
+		//set the red color to the wrong option
+		element.classList.add("wrong");
+		// add the indicator wrong mark
+		updateAnswerIndicator("wrong");
+
+		// if the answer is incorrect, show the correct option
+		const optionLen = optionsContainer.children.length;
+		for(let i=0; i<optionLen; i++){
+			if(parseInt(optionsContainer.children[i].id) === currentQuestion.answer){
+				optionsContainer.children[i].classList.add("correct");
+			}
+		}
+	}
+	attempt++;
+	unclickableOptions();
+}
 
 
 // Restrict the user to select an option, when once selected
